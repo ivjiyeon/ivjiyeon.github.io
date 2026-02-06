@@ -559,7 +559,7 @@ main {
 /**
  * #testimonials 
  */
-
+/* 
 .testimonials { margin-bottom: 30px; }
 
 .testimonials-title { margin-bottom: 20px; }
@@ -605,13 +605,13 @@ main {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
-}
+} */
 
 
 /**
  * #testimonials-modal
  */
-
+/* 
 .modal-container {
   position: fixed;
   top: 0;
@@ -719,13 +719,13 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
-}
+} */
 
 
 /**
  * #clients 
  */
-
+/* 
 .clients { margin-bottom: 15px; }
 
 .clients-list {
@@ -755,7 +755,7 @@ main {
 }
 
 .clients-item img:hover { filter: grayscale(0); }
-
+ */
 
 
 
@@ -834,49 +834,69 @@ main {
  * skills 
  */
 
-.skills-title { margin-bottom: 20px; }
+/**
+ * #skills 
+ */
 
-.skills-list { padding: 20px; }
-
-
-.skills-item:not(:last-child) { margin-bottom: 15px; }
-
-.skill .title-wrapper {
+.title-wrapper {
   display: flex;
   align-items: center;
-  gap: 5px;
-  margin-bottom: 8px;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+/* 
+.skills .skills-category-box { text-align: left; }
+
+.skills-list {
+  font-size: var(--fs-6);
+  margin-left: 45px;
 }
 
-.skill .title-wrapper data {
-  color: var(--light-gray);
-  font-size: var(--fs-7);
-  font-weight: var(--fw-300);
-}
+.skills-item { position: relative; }
 
-.skill-progress-bg {
-  background: var(--jet);
-  width: 100%;
-  height: 8px;
-  border-radius: 10px;
-}
-
-.skill-progress-fill {
-  background: var(--text-gradient-yellow);
-  height: 100%;
-  border-radius: inherit;
-}
+.skills-item:not(:last-child) { margin-bottom: 20px; } */
 
 /**
  * certificates 
  */
 
-.certificate-title { margin-bottom: 20px; }
+.certificate { margin-bottom: 35px; }
 
 .certificate-container { 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: auto auto auto; /*  repeat(auto-fit, minmax(300px, 1fr)); */
     gap: 2.5rem;
+}
+
+.certificate-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.certificate-item {
+  position: relative;
+  background: var(--border-gradient-onyx);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+}
+
+.certificate-item::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.certificate-item-text {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-3);
+  line-height: 1.6;
 }
 
 .certificate-category { 
@@ -886,7 +906,6 @@ main {
     transition: all 0.3s ease;
 }
 
-.certificate-list { padding: 20px; }
 
 
 /* .certificate-list {
