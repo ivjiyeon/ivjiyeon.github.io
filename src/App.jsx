@@ -64,7 +64,7 @@ function App() {
       title: 'Hyperliquid Copy Trading',
       category: 'Automation',
       description: 'Real-time copy trading system mirroring top traders via Hyperliquid API integration.',
-      image: '/src/assets/images/hyperliquid-logo.jpg',
+      image: 'https://github.com/ivjiyeon/ivjiyeon.github.io/src/assets/images/hyperliquid-logo.jpg',
       githubUrl: 'https://github.com/ivjiyeon/HyperliquidCopyTrading'
     },
     {
@@ -72,7 +72,7 @@ function App() {
       title: 'Automatic Piano Reduction',
       category: 'AI & Machine Learning',
       description: 'AI system converting orchestral to single-pianist scores using LSTM modeling.',
-      image: '/src/assets/images/piano.jpg',
+      image: 'https://github.com/ivjiyeon/ivjiyeon.github.io/src/assets/images/piano.jpg',
       githubUrl: 'https://github.com/ivjiyeon/FYP'
     },
     {
@@ -80,7 +80,7 @@ function App() {
       title: 'Skin Lesion Classification',
       category: 'AI & Machine Learning',
       description: 'Skin cancer detection model built with ResNet and TFRecord data augmentation.',
-      image: '/src/assets/images/skin.jpg',
+      image: 'https://github.com/ivjiyeon/ivjiyeon.github.io/src/assets/images/skin.jpg',
       githubUrl: 'https://github.com/ivjiyeon/Skin-Lesion-Classification'
     },
     {
@@ -88,7 +88,7 @@ function App() {
       title: 'Typing Game',
       category: 'Game',
       description: 'Interactive typing practice game developed in C# with WPF and MVC architecture.',
-      image: '/src/assets/images/typing.jpg',
+      image: 'https://github.com/ivjiyeon/ivjiyeon.github.io/src/assets/images/typing.jpg',
       githubUrl: 'https://github.com/ivjiyeon/TypingGame'
     },
   ];
@@ -155,7 +155,7 @@ function App() {
           <div className="flex flex-col items-center pt-16 mb-12">
             <div className="relative w-40 h-40 rounded-full overflow-hidden border-4 border-gray-700/50 mb-6">
               <img
-                src="\src\assets\images\jiyeon.JPG"
+                src="https://github.com/ivjiyeon/ivjiyeon.github.io/src/assets/images/jiyeon.JPG"
                 alt="Jiyeon Byun"
                 className="w-full h-full object-cover"
               />
