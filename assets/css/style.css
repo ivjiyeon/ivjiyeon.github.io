@@ -834,15 +834,54 @@ main {
  * skills 
  */
 
-/**
- * #skills 
- */
-
 .title-wrapper {
   display: flex;
   align-items: center;
   gap: 15px;
   margin-bottom: 25px;
+}
+
+.skills { margin-bottom: 35px; }
+
+.skills-category-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+}
+
+.skills-category {
+  position: relative;
+  background: var(--border-gradient-onyx);
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+  text-align: left;
+}
+
+.skills-category-container::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+  text-align: left;
+}
+
+.skills-icon-box { margin-bottom: 10px; }
+
+.skills-icon-box img { margin: auto; }
+
+.skills-category { text-align: left; }
+
+/* .skills-category-label { margin-bottom: 7px; } */
+
+.skills-category-text {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-3);
+  line-height: 1.6;
 }
 /* 
 .skills .skills-category-box { text-align: left; }
@@ -862,15 +901,11 @@ main {
 
 .certificate { margin-bottom: 35px; }
 
-.certificate-container { 
-    display: grid;
-    grid-template-columns: auto auto auto; /*  repeat(auto-fit, minmax(300px, 1fr)); */
-    gap: 2.5rem;
-}
+.certificate-title { margin-bottom: 20px; }
 
 .certificate-list {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: auto auto auto;
   gap: 20px;
 }
 
@@ -892,35 +927,20 @@ main {
   z-index: -1;
 }
 
+.certificate-icon-box { margin-bottom: 10px; }
+
+.certificate-icon-box img { margin: auto; }
+
+.certificate-container { text-align: center; }
+
+.certificate-item-title { margin-bottom: 7px; }
+
 .certificate-item-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-3);
   line-height: 1.6;
 }
-
-.certificate-category { 
-    padding: 2rem;
-    border-radius: 12px;
-    border: 1px solid #233554;
-    transition: all 0.3s ease;
-}
-
-
-
-/* .certificate-list {
-  list-style: none;
-  padding: 0;
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #8892b0;
-} */
-
-/* .certificate-list li {
-  margin-bottom: 0.8rem;
-  position: relative;
-  padding-left: 1.8rem;
-} */
 
 
 /*-----------------------------------*\
