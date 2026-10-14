@@ -3,11 +3,12 @@
 
 const experience = [
   {
-    org: 'Apple Asia Limited (via TEKsystems)',
-    role: 'Contractor — Data Pipelines',
+    org: 'Apple Inc.',
+    role: 'Quality Engineer (Contractor)',
     period: 'April 2022 – April 2025',
     points: [
-      'Developed data processing pipelines for over 10 locales, reducing data preparation time by 80%.',
+      'Built data pipelines and automated tests to support quality assurance in the AI/ML team across 10+ locales.',
+      'Developed data processing pipelines for over 10 locales, reducing data preparation time significantly.',
       'Created Python scripts to perform ETL to maintain and expand testing scope and domains.',
       'Configured CI/CD pipelines to streamline software deployment workflows.',
       'Expanded Swift test cases for comprehensive scenario coverage and quality assurance.',
@@ -15,7 +16,7 @@ const experience = [
   },
   {
     org: 'The Chinese University of Hong Kong',
-    role: 'Research Assistant',
+    role: 'AI/ML Research Assistant (AI for the Future)',
     period: 'August 2021 – April 2022',
     points: [
       'Leveraged the pre-trained AI Magenta model to generate music tailored to user specifications.',
@@ -37,8 +38,8 @@ const experience = [
 const education = [
   {
     school: 'Tufts University',
-    credential: "Master's in Artificial Intelligence",
-    period: 'In progress · Boston, MA',
+    credential: "Master's in Artificial Intelligence — Class of 2028",
+    period: 'September 2026 – May 2028 · Medford, MA',
     detail:
       'Focus: machine learning, reinforcement learning, and large language models — including diffusion language models, agentic AI, and AI for science.',
   },
@@ -90,20 +91,12 @@ const projects = [
     image: '/images/hyperliquid-logo.jpg',
     url: 'https://github.com/ivjiyeon/HyperliquidCopyTrading',
   },
-  {
-    title: 'Typing Game',
-    category: 'Game',
-    description:
-      'Interactive typing practice game developed in C# with WPF and MVC architecture.',
-    image: '/images/typing.jpg',
-    url: 'https://github.com/ivjiyeon/TypingGame',
-  },
 ];
 
 const skillGroups = [
   {
     title: 'AI & Machine Learning',
-    items: ['PyTorch', 'TensorFlow', 'Keras', 'Scikit-learn', 'LangChain', 'RAG', 'Reinforcement Learning', 'LLMs & Agentic AI'],
+    items: ['PyTorch', 'TensorFlow', 'Keras', 'Scikit-learn', 'LangChain', 'RAG', 'Hermes', 'Temporal Fusion Transformer (TFT)', 'LightGBM', 'Reinforcement Learning', 'LLMs & Agentic AI'],
   },
   {
     title: 'Programming Languages',
@@ -114,8 +107,8 @@ const skillGroups = [
     items: ['React', 'Tailwind CSS', 'Flask', 'RESTful APIs', 'Gradio', 'Ajax', 'Scrapy', 'Selenium', 'MySQL'],
   },
   {
-    title: 'Tools',
-    items: ['Docker', 'Git', 'CI/CD', 'WPF'],
+    title: 'Tools & Cloud',
+    items: ['Docker', 'Google Cloud (GCP / Cloud Run)', 'Azure DevOps', 'Git', 'CI/CD', 'WPF'],
   },
 ];
 
@@ -183,7 +176,7 @@ export default function App() {
               AI/ML engineer building systems that hold up out-of-sample.
             </h1>
             <p className="text-lg text-black/70 leading-relaxed mb-8 max-w-xl">
-              I'm Jiyeon Byun — a software engineer and data scientist with 5+ years of
+              I'm Jiyeon Byun — a software engineer and data scientist with 4+ years of
               experience, including data pipelines at Apple, now completing a Master's in
               Artificial Intelligence at Tufts. I build machine learning systems end to end,
               and I validate them like it matters — because it does.
@@ -202,6 +195,14 @@ export default function App() {
                 className="border border-black/25 font-semibold px-6 py-3 rounded-full hover:border-black transition-colors"
               >
                 GitHub
+              </a>
+              <a
+                href="https://linkedin.com/in/jiyeon-byun"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-black/25 font-semibold px-6 py-3 rounded-full hover:border-black transition-colors"
+              >
+                LinkedIn
               </a>
             </div>
           </div>
@@ -223,8 +224,8 @@ export default function App() {
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
           {[
-            ['5+', 'years of engineering experience'],
-            ['80%', 'data prep time cut at Apple'],
+            ['4+', 'years of engineering experience'],
+            ['3', 'years at Apple building data pipelines'],
             ['10+', 'locales served by my pipelines'],
             ['200+', 'schools reached by my CUHK web app'],
           ].map(([num, label]) => (
@@ -243,10 +244,11 @@ export default function App() {
           <div className="grid md:grid-cols-2 gap-10 text-black/75 leading-relaxed text-[1.05rem]">
             <p>
               I started in computer science at The Chinese University of Hong Kong,
-              specializing in Intelligent Science, and spent five years shipping real
-              systems — ETL and data pipelines at Apple Asia that cut data preparation
-              time by 80%, an AI music-generation web app at CUHK used by over 200
-              schools, and an e-commerce platform at PCCW Solutions.
+              specializing in Intelligent Science, and spent over four years shipping
+              real systems — data pipelines and automated tests at Apple supporting
+              quality assurance for the AI/ML team across 10+ locales, an AI
+              music-generation web app at CUHK used by over 200 schools, and an
+              e-commerce platform at PCCW Solutions.
             </p>
             <p>
               Now in Boston for my Master's in AI at Tufts, my work centers on machine
@@ -302,6 +304,47 @@ export default function App() {
             ))}
           </div>
         </div>
+
+        {/* Leadership & Service */}
+        <div className="mt-20">
+          <SectionHeading eyebrow="Leadership & Service" title="Beyond the classroom" />
+          <div className="space-y-6">
+            {[
+              {
+                org: 'Hong Kong Institution of Engineers — Student Chapter',
+                role: 'Chairperson',
+                period: 'September 2017 – September 2018',
+                points: [
+                  'Led inter-university events, career programming, and member recruitment for the chapter.',
+                  'Hosted a career talk for Mechanical and Automation Engineering students.',
+                  'Recruited members for the HKIE from The Chinese University of Hong Kong.',
+                ],
+              },
+              {
+                org: 'C. W. Chu College Student Union, CUHK',
+                role: 'General Affairs Manager',
+                period: 'March 2017 – March 2018',
+                points: [
+                  'Represented the college on the Library Users Group and ITSC Student User Consultation Committee.',
+                  'Advocated for an amendment to protect the privacy of student emails and their personal data.',
+                ],
+              },
+            ].map((job) => (
+              <article key={job.org} className="bg-white border border-black/10 rounded-3xl p-7 md:p-9 grid md:grid-cols-[1fr_1.6fr] gap-6">
+                <div>
+                  <h3 className="font-serif text-2xl font-medium leading-snug">{job.org}</h3>
+                  <p className="text-amber-700 font-semibold mt-2">{job.role}</p>
+                  <p className="text-sm text-black/55 mt-1">{job.period}</p>
+                </div>
+                <ul className="space-y-2.5 text-black/75 leading-relaxed list-disc pl-5">
+                  {job.points.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* ── Projects ── */}
@@ -323,14 +366,19 @@ export default function App() {
                   Featured · AI & Machine Learning
                 </p>
                 <h3 className="font-serif text-3xl md:text-5xl font-medium mb-4 group-hover:text-amber-300 transition-colors">
-                  BTCUSDT Signal Bot
+                  Algorithmic Trading System & Agent Framework
                 </h3>
                 <p className="text-white/70 leading-relaxed">
-                  A multi-timeframe (15m / 1h / 4h) BTCUSDT signal system with EMA / ADX
-                  strategies and ATR-based risk sizing, backtested with strict held-out
-                  validation. The 4h long strategy, tuned on 2021–2024, returned +21.5%
-                  out-of-sample on untouched 2025–2026 data while buy-and-hold lost 9.7% —
-                  and the timeframes that didn't survive validation are reported just as plainly.
+                  Automated cryptocurrency futures (BTC/USDT) trading integrating Binance
+                  APIs, with machine-learning forecasting — Temporal Fusion Transformer
+                  (TFT) and LightGBM — for multi-timeframe volatility and price movement,
+                  and a cloud-native webhook execution architecture on Google Cloud Run
+                  with Docker and Telegram bot integration for event-driven signals.
+                  FinRL reinforcement-learning approaches were evaluated for trade
+                  execution policies, and every strategy is backtested with strict
+                  held-out validation: the 4h long strategy, tuned on 2021–2024, returned
+                  +21.5% out-of-sample on untouched 2025–2026 data while buy-and-hold
+                  lost 9.7%.
                 </p>
               </div>
               <div className="hidden md:flex w-24 h-24 shrink-0 rounded-full bg-amber-500/20 border border-amber-400/40 items-center justify-center font-serif text-5xl text-amber-300">
@@ -339,7 +387,7 @@ export default function App() {
             </div>
           </a>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {projects.map((project) => (
               <a
                 key={project.title}
@@ -388,21 +436,43 @@ export default function App() {
           ))}
         </div>
 
+        <div className="bg-white border border-black/10 rounded-3xl p-6 mt-4 flex flex-wrap items-center gap-x-8 gap-y-3">
+          <h3 className="font-serif text-xl font-medium">Languages</h3>
+          <div className="flex flex-wrap gap-2">
+            {['English (Fluent)', 'Korean (Native)', 'Mandarin (Proficient)'].map((lang) => (
+              <span key={lang} className="text-sm bg-[#faf8f4] border border-black/10 rounded-full px-3 py-1.5">
+                {lang}
+              </span>
+            ))}
+          </div>
+        </div>
+
         <div className="flex flex-wrap gap-4 mt-6">
           {[
             ['IBM AI Engineering', 'https://coursera.org/share/528e27529c3ddf930a7cbf5a4beff8ad'],
             ['IBM RAG and Agentic AI', 'https://coursera.org/share/42f00107f9b0293c8e1b581f7596d7c3'],
-          ].map(([title, link]) => (
-            <a
-              key={title}
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white border border-black/10 rounded-full px-5 py-3 font-medium hover:border-amber-700 hover:text-amber-700 transition-colors"
-            >
-              Certification · {title} ↗
-            </a>
-          ))}
+            ['IBM Deep Learning with PyTorch, Keras and TensorFlow', null],
+            ['Generative AI with LLMs', null],
+          ].map(([title, link]) =>
+            link ? (
+              <a
+                key={title}
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white border border-black/10 rounded-full px-5 py-3 font-medium hover:border-amber-700 hover:text-amber-700 transition-colors"
+              >
+                Certification · {title} ↗
+              </a>
+            ) : (
+              <span
+                key={title}
+                className="bg-white border border-black/10 rounded-full px-5 py-3 font-medium"
+              >
+                Certification · {title}
+              </span>
+            )
+          )}
         </div>
       </section>
 
@@ -419,8 +489,8 @@ export default function App() {
           </div>
           <div className="space-y-2 text-[1.05rem]">
             <div>
-              <a href="mailto:ivjiyeonb@gmail.com" className="font-semibold hover:text-amber-700">
-                ivjiyeonb@gmail.com
+              <a href="mailto:Jiyeon.Byun@tufts.edu" className="font-semibold hover:text-amber-700">
+                Jiyeon.Byun@tufts.edu
               </a>
             </div>
             <div>
@@ -428,11 +498,18 @@ export default function App() {
                 github.com/ivjiyeon
               </a>
             </div>
-            <div className="text-black/60">+852 6579 9634 · Boston, MA, USA</div>
+            <div>
+              <a href="https://linkedin.com/in/jiyeon-byun" target="_blank" rel="noopener noreferrer" className="font-semibold hover:text-amber-700">
+                linkedin.com/in/jiyeon-byun
+              </a>
+            </div>
+            <div className="text-black/60">
+              <a href="tel:+18578298750" className="hover:text-amber-700">(857) 829-8750</a> · Boston, MA, USA
+            </div>
           </div>
         </div>
         <div className="border-t border-black/10 py-5 text-center text-sm text-black/45">
-          © 2026 Jiyeon Byun · v3 draft
+          © 2026 Jiyeon Byun
         </div>
       </footer>
     </div>
