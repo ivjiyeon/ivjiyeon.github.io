@@ -73,7 +73,7 @@ const projects = [
     description:
       'AI system converting orchestral scores to single-pianist scores using LSTM modeling.',
     image: '/images/piano.jpg',
-    url: 'https://github.com/ivjiyeon/FYP',
+    url: null, // FYP repo is not publicly reachable (404) — card is unlinked until it is restored
   },
   {
     title: 'Skin Lesion Classification',
@@ -355,7 +355,7 @@ export default function App() {
 
           {/* Featured project */}
           <a
-            href="https://github.com/ivjiyeon"
+            href="https://github.com/ivjiyeon/BTC-Signal"
             target="_blank"
             rel="noopener noreferrer"
             className="block group rounded-3xl overflow-hidden border border-white/15 bg-gradient-to-br from-amber-500/25 via-[#22201a] to-[#1a1915] p-8 md:p-12 mb-6 hover:border-amber-400/50 transition-colors"
@@ -388,12 +388,15 @@ export default function App() {
           </a>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {projects.map((project) => (
-              <a
+            {projects.map((project) => {
+              const Wrapper = project.url ? 'a' : 'div';
+              const wrapperProps = project.url
+                ? { href: project.url, target: '_blank', rel: 'noopener noreferrer' }
+                : {};
+              return (
+              <Wrapper
                 key={project.title}
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
+                {...wrapperProps}
                 className="group bg-[#22201b] border border-white/10 rounded-3xl overflow-hidden hover:border-amber-400/40 transition-colors"
               >
                 <div className="aspect-video overflow-hidden">
@@ -412,8 +415,9 @@ export default function App() {
                   </h3>
                   <p className="text-sm text-white/65 leading-relaxed">{project.description}</p>
                 </div>
-              </a>
-            ))}
+              </Wrapper>
+              );
+            })}
           </div>
         </div>
       </section>
