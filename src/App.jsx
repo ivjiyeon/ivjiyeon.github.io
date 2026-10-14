@@ -451,8 +451,8 @@ export default function App() {
           {[
             ['IBM AI Engineering', 'https://coursera.org/share/528e27529c3ddf930a7cbf5a4beff8ad'],
             ['IBM RAG and Agentic AI', 'https://coursera.org/share/42f00107f9b0293c8e1b581f7596d7c3'],
-            ['IBM Deep Learning with PyTorch, Keras and TensorFlow', null],
-            ['Generative AI with LLMs', null],
+            ['IBM Deep Learning with PyTorch, Keras and TensorFlow', 'https://www.coursera.org/account/accomplishments/specialization/9Q1GYQZJQ5FP'],
+            ['Generative AI Engineering with LLMs', 'https://www.coursera.org/account/accomplishments/specialization/ZK33OYDUP18L'],
           ].map(([title, link]) =>
             link ? (
               <a
