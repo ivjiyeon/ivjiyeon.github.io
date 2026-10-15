@@ -73,7 +73,7 @@ const projects = [
     description:
       'AI system converting orchestral scores to single-pianist scores using LSTM modeling.',
     image: '/images/piano.jpg',
-    url: null, // FYP repo is not publicly reachable (404) — card is unlinked until it is restored
+    url: 'https://github.com/ivjiyeon/Automatic-Piano-Reduction',
   },
   {
     title: 'Skin Lesion Classification',
