@@ -355,7 +355,7 @@ export default function App() {
 
           {/* Featured project */}
           <a
-            href="https://github.com/ivjiyeon/BTC-Signal"
+            href="https://github.com/ivjiyeon/TemporalFusionTransformerTrading"
             target="_blank"
             rel="noopener noreferrer"
             className="block group rounded-3xl overflow-hidden border border-white/15 bg-gradient-to-br from-amber-500/25 via-[#22201a] to-[#1a1915] p-8 md:p-12 mb-6 hover:border-amber-400/50 transition-colors"
