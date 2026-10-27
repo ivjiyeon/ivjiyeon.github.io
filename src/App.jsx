@@ -217,7 +217,7 @@ export default function App() {
           </div>
           <div className="rise">
             <div className="rounded-3xl overflow-hidden border border-black/10 shadow-xl rotate-1">
-              <img src="/images/jiyeon.JPG" alt="Jiyeon Byun" className="w-full h-full object-cover object-center scale-110 aspect-[4/5]" />
+              <img src="/images/jiyeon.JPG" alt="Jiyeon Byun" className="w-full h-full object-cover object-center scale-110 -translate-x-[5%] translate-y-[5%] aspect-[4/5]" />
             </div>
           </div>
         </div>
