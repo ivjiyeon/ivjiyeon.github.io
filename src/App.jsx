@@ -182,7 +182,7 @@ export default function App() {
               Boston, MA · Master's in AI at Tufts University
             </p>
             <h1 className="font-serif text-5xl md:text-7xl font-medium leading-[1.05] mb-6">
-              AI/ML engineer building machine learning systems for real-world problems.
+              AI/ML engineer building systems for real-world problems.
             </h1>
             <p className="text-lg text-black/70 leading-relaxed mb-8 max-w-xl">
               I'm Jiyeon Byun, a Master's in AI student at Tufts with 4+ years of
