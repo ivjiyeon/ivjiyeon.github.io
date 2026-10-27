@@ -6,6 +6,7 @@ const experience = [
     org: 'Apple Inc.',
     role: 'Quality Engineer (Contractor)',
     period: 'April 2022 – April 2025',
+    location: 'Hong Kong',
     points: [
       'Built data pipelines and automated tests to support quality assurance in the AI/ML team across 10+ locales.',
       'Developed data processing pipelines for over 10 locales, reducing data preparation time significantly.',
@@ -18,6 +19,7 @@ const experience = [
     org: 'The Chinese University of Hong Kong',
     role: 'AI/ML Research Assistant (AI for the Future)',
     period: 'August 2021 – April 2022',
+    location: 'Hong Kong',
     points: [
       'Leveraged the pre-trained AI Magenta model to generate music tailored to user specifications.',
       'Developed an interactive web application using Ajax with Flask APIs for the music generation.',
@@ -28,6 +30,7 @@ const experience = [
     org: 'PCCW Solutions',
     role: 'Solution Developer',
     period: 'September 2020 – April 2021',
+    location: 'Hong Kong',
     points: [
       'Maintained both the front-end and back-end of an e-commerce platform for clients in Singapore.',
       'Worked closely with the Business Intelligence team to execute ETL processes, extracting and transforming raw customer data from the data warehouse.',
@@ -39,14 +42,16 @@ const education = [
   {
     school: 'Tufts University',
     credential: "Master's in Artificial Intelligence — Class of 2028",
-    period: 'September 2026 – May 2028 · Medford, MA',
+    period: 'September 2026 – May 2028',
+    location: 'Medford, MA',
     detail:
       'Focus: machine learning, reinforcement learning, and large language models — including diffusion language models, agentic AI, and AI for science.',
   },
   {
     school: 'Chinese University of Hong Kong',
-    credential: 'B.Sc Computer Science — specializing in Intelligent Science',
+    credential: 'B.Sc Computer Science',
     period: 'September 2016 – June 2020',
+    location: 'Hong Kong',
     detail:
       'Relevant courses: Data Structures, Formal Languages and Automata Theory, Algorithms, Fundamentals of Artificial Intelligence, Software Engineering, Machine Learning.',
   },
@@ -54,6 +59,7 @@ const education = [
     school: 'Eötvös Loránd University',
     credential: 'Term Exchange',
     period: 'February 2019 – June 2019',
+    location: 'Budapest, Hungary',
     detail:
       'Relevant courses: Operating Systems, Machine Learning, Data Models and Databases, Data Mining in Smart Systems.',
   },
@@ -61,6 +67,7 @@ const education = [
     school: 'Tsinghua University',
     credential: 'Summer Exchange',
     period: 'July 2018',
+    location: 'Beijing, China',
     detail:
       'Relevant courses: Physics of Information, Computational Modeling for Environmental and Ecological Management.',
   },
@@ -134,7 +141,9 @@ const interests = [
 function SectionHeading({ eyebrow, title }) {
   return (
     <div className="mb-10">
-      <p className="text-xs font-semibold uppercase tracking-[0.25em] text-amber-700 mb-3">{eyebrow}</p>
+      {eyebrow && (
+        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-amber-700 mb-3">{eyebrow}</p>
+      )}
       <h2 className="font-serif text-4xl md:text-5xl font-medium">{title}</h2>
     </div>
   );
@@ -173,12 +182,12 @@ export default function App() {
               Boston, MA · Master's in AI at Tufts University
             </p>
             <h1 className="font-serif text-5xl md:text-7xl font-medium leading-[1.05] mb-6">
-              AI/ML engineer building systems that hold up out-of-sample.
+              AI/ML engineer building machine learning systems for real-world problems.
             </h1>
             <p className="text-lg text-black/70 leading-relaxed mb-8 max-w-xl">
-              I'm Jiyeon Byun — a software engineer and data scientist with 4+ years of
-              experience, including data pipelines at Apple, now completing a Master's in
-              Artificial Intelligence at Tufts. I build machine learning systems end to end,
+              I'm Jiyeon Byun, a Master's in AI student at Tufts with 4+ years of
+              software engineering experience, including three years at Apple building
+              data pipelines. I build machine learning systems end to end,
               and I validate them like it matters — because it does.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -208,15 +217,7 @@ export default function App() {
           </div>
           <div className="rise">
             <div className="rounded-3xl overflow-hidden border border-black/10 shadow-xl rotate-1">
-              <img src="/images/jiyeon.JPG" alt="Jiyeon Byun" className="w-full h-full object-cover aspect-[4/5]" />
-            </div>
-            <div className="flex gap-3 mt-5">
-              <span className="flex-1 text-center text-sm font-medium bg-white border border-black/10 rounded-2xl py-3">
-                M.S. AI · Tufts
-              </span>
-              <span className="flex-1 text-center text-sm font-medium bg-white border border-black/10 rounded-2xl py-3">
-                Boston, MA
-              </span>
+              <img src="/images/jiyeon.JPG" alt="Jiyeon Byun" className="w-full h-full object-cover object-center scale-110 aspect-[4/5]" />
             </div>
           </div>
         </div>
@@ -240,7 +241,7 @@ export default function App() {
       {/* ── About ── */}
       <section id="about" className="bg-white border-y border-black/10">
         <div className="max-w-6xl mx-auto px-6 py-20">
-          <SectionHeading eyebrow="About" title="From production pipelines to research-grade ML" />
+          <SectionHeading title="About" />
           <div className="grid md:grid-cols-2 gap-10 text-black/75 leading-relaxed text-[1.05rem]">
             <p>
               I started in computer science at The Chinese University of Hong Kong,
@@ -272,7 +273,7 @@ export default function App() {
 
       {/* ── Experience ── */}
       <section id="experience" className="max-w-6xl mx-auto px-6 py-20">
-        <SectionHeading eyebrow="Experience" title="Where I've worked" />
+        <SectionHeading title="Experience" />
         <div className="space-y-6">
           {experience.map((job) => (
             <article key={job.org} className="bg-white border border-black/10 rounded-3xl p-7 md:p-9 grid md:grid-cols-[1fr_1.6fr] gap-6">
@@ -280,6 +281,7 @@ export default function App() {
                 <h3 className="font-serif text-2xl font-medium leading-snug">{job.org}</h3>
                 <p className="text-amber-700 font-semibold mt-2">{job.role}</p>
                 <p className="text-sm text-black/55 mt-1">{job.period}</p>
+                <p className="text-sm text-black/55 mt-1">{job.location}</p>
               </div>
               <ul className="space-y-2.5 text-black/75 leading-relaxed list-disc pl-5">
                 {job.points.map((point) => (
@@ -292,13 +294,14 @@ export default function App() {
 
         {/* Education */}
         <div className="mt-20">
-          <SectionHeading eyebrow="Education" title="Where I've studied" />
+          <SectionHeading title="Education" />
           <div className="grid md:grid-cols-2 gap-4">
             {education.map((ed) => (
               <article key={ed.school} className="border border-black/10 rounded-3xl p-7 bg-white">
                 <h3 className="font-serif text-2xl font-medium">{ed.school}</h3>
                 <p className="text-amber-700 font-semibold mt-1.5">{ed.credential}</p>
                 <p className="text-sm text-black/55 mt-1">{ed.period}</p>
+                <p className="text-sm text-black/55 mt-1">{ed.location}</p>
                 <p className="text-black/70 leading-relaxed mt-3 text-[0.95rem]">{ed.detail}</p>
               </article>
             ))}
@@ -307,13 +310,14 @@ export default function App() {
 
         {/* Leadership & Service */}
         <div className="mt-20">
-          <SectionHeading eyebrow="Leadership & Service" title="Beyond the classroom" />
+          <SectionHeading title="Leadership & Service" />
           <div className="space-y-6">
             {[
               {
                 org: 'Hong Kong Institution of Engineers — Student Chapter',
                 role: 'Chairperson',
                 period: 'September 2017 – September 2018',
+                location: 'Hong Kong',
                 points: [
                   'Led inter-university events, career programming, and member recruitment for the chapter.',
                   'Hosted a career talk for Mechanical and Automation Engineering students.',
@@ -324,6 +328,7 @@ export default function App() {
                 org: 'C. W. Chu College Student Union, CUHK',
                 role: 'General Affairs Manager',
                 period: 'March 2017 – March 2018',
+                location: 'Hong Kong',
                 points: [
                   'Represented the college on the Library Users Group and ITSC Student User Consultation Committee.',
                   'Advocated for an amendment to protect the privacy of student emails and their personal data.',
@@ -335,6 +340,7 @@ export default function App() {
                   <h3 className="font-serif text-2xl font-medium leading-snug">{job.org}</h3>
                   <p className="text-amber-700 font-semibold mt-2">{job.role}</p>
                   <p className="text-sm text-black/55 mt-1">{job.period}</p>
+                  <p className="text-sm text-black/55 mt-1">{job.location}</p>
                 </div>
                 <ul className="space-y-2.5 text-black/75 leading-relaxed list-disc pl-5">
                   {job.points.map((point) => (
@@ -350,8 +356,7 @@ export default function App() {
       {/* ── Projects ── */}
       <section id="projects" className="bg-[#16150f] text-white">
         <div className="max-w-6xl mx-auto px-6 py-20">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-amber-400 mb-3">Projects</p>
-          <h2 className="font-serif text-4xl md:text-5xl font-medium mb-10">Selected work</h2>
+          <h2 className="font-serif text-4xl md:text-5xl font-medium mb-10">Projects</h2>
 
           {/* Featured project */}
           <a
@@ -424,7 +429,7 @@ export default function App() {
 
       {/* ── Skills & certifications ── */}
       <section id="skills" className="max-w-6xl mx-auto px-6 py-20">
-        <SectionHeading eyebrow="Skills" title="What I work with" />
+        <SectionHeading title="Skills" />
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {skillGroups.map((group) => (
             <div key={group.title} className="bg-white border border-black/10 rounded-3xl p-6">
