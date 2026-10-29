@@ -434,26 +434,14 @@ export default function App() {
           {skillGroups.map((group) => (
             <div key={group.title} className="bg-white border border-black/10 rounded-3xl p-6">
               <h3 className="font-serif text-xl font-medium mb-4">{group.title}</h3>
-              <div className="flex flex-wrap gap-2">
-                {group.items.map((item) => (
-                  <span key={item} className="text-sm bg-[#faf8f4] border border-black/10 rounded-full px-3 py-1.5">
-                    {item}
-                  </span>
-                ))}
-              </div>
+              <p className="text-sm text-black/70 leading-relaxed">{group.items.join(' · ')}</p>
             </div>
           ))}
         </div>
 
         <div className="bg-white border border-black/10 rounded-3xl p-6 mt-4 flex flex-wrap items-center gap-x-8 gap-y-3">
           <h3 className="font-serif text-xl font-medium">Languages</h3>
-          <div className="flex flex-wrap gap-2">
-            {['English (Fluent)', 'Korean (Native)', 'Mandarin (Proficient)'].map((lang) => (
-              <span key={lang} className="text-sm bg-[#faf8f4] border border-black/10 rounded-full px-3 py-1.5">
-                {lang}
-              </span>
-            ))}
-          </div>
+          <p className="text-sm text-black/70 leading-relaxed">English (Fluent) · Korean (Native) · Mandarin (Proficient)</p>
         </div>
 
         <div className="flex flex-wrap gap-4 mt-6">
@@ -498,8 +486,8 @@ export default function App() {
           </div>
           <div className="space-y-2 text-[1.05rem]">
             <div>
-              <a href="mailto:Jiyeon.Byun@tufts.edu" className="font-semibold hover:text-amber-700">
-                Jiyeon.Byun@tufts.edu
+              <a href="mailto:ivjiyeonb@gmail.com" className="font-semibold hover:text-amber-700">
+                ivjiyeonb@gmail.com
               </a>
             </div>
             <div>
@@ -513,7 +501,7 @@ export default function App() {
               </a>
             </div>
             <div className="text-black/60">
-              <a href="tel:+18578298750" className="hover:text-amber-700">(857) 829-8750</a> · Boston, MA, USA
+              Boston, MA, USA
             </div>
           </div>
         </div>
