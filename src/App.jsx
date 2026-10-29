@@ -8,7 +8,6 @@ const experience = [
     period: 'April 2022 – April 2025',
     location: 'Hong Kong',
     points: [
-      'Built data pipelines and automated tests to support quality assurance in the AI/ML team across 10+ locales.',
       'Developed data processing pipelines for over 10 locales, reducing data preparation time significantly.',
       'Created Python scripts to perform ETL to maintain and expand testing scope and domains.',
       'Configured CI/CD pipelines to streamline software deployment workflows.',
@@ -41,7 +40,7 @@ const experience = [
 const education = [
   {
     school: 'Tufts University',
-    credential: "Master's in Artificial Intelligence — Class of 2028",
+    credential: "Master's in Artificial Intelligence",
     period: 'September 2026 – May 2028',
     location: 'Medford, MA',
     detail:
@@ -371,7 +370,7 @@ export default function App() {
                   Featured · AI & Machine Learning
                 </p>
                 <h3 className="font-serif text-3xl md:text-5xl font-medium mb-4 group-hover:text-amber-300 transition-colors">
-                  Algorithmic Trading System & Agent Framework
+                  Automatic Trading System
                 </h3>
                 <p className="text-white/70 leading-relaxed">
                   Automated cryptocurrency futures (BTC/USDT) trading integrating Binance
@@ -380,10 +379,7 @@ export default function App() {
                   and a cloud-native webhook execution architecture on Google Cloud Run
                   with Docker and Telegram bot integration for event-driven signals.
                   FinRL reinforcement-learning approaches were evaluated for trade
-                  execution policies, and every strategy is backtested with strict
-                  held-out validation: the 4h long strategy, tuned on 2021–2024, returned
-                  +21.5% out-of-sample on untouched 2025–2026 data while buy-and-hold
-                  lost 9.7%.
+                  execution policies.
                 </p>
               </div>
               <div className="hidden md:flex w-24 h-24 shrink-0 rounded-full bg-amber-500/20 border border-amber-400/40 items-center justify-center font-serif text-5xl text-amber-300">
@@ -481,7 +477,7 @@ export default function App() {
             <p className="text-black/65 max-w-md leading-relaxed">
               I'm in Boston and looking for Summer / Fall 2027 internships in AI/ML
               engineering, data science, and software engineering. The fastest way to
-              reach me is email.
+              reach me is via <a href="mailto:ivjiyeonb@gmail.com" className="font-semibold hover:text-amber-700">email</a>.
             </p>
           </div>
           <div className="space-y-2 text-[1.05rem]">
